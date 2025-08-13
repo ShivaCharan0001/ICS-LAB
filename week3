@@ -415,6 +415,8 @@ config.inc.php.dist
                                                                                                                               
 ┌──(kali㉿kali)-[/var/www/html/dvwa/config]
 └─$ sudo nano config.inc.php
+
+// after typing the sudo nano config.inc.php, inside the nano editor edit the username to 'admin' and password to 'password' //
                                                                                                                               
 ┌──(kali㉿kali)-[/var/www/html/dvwa/config]
 └─$ sudo systemctl restart mysql

@@ -1,0 +1,535 @@
+┌──(kali㉿kali)-[~]
+└─$ cd /var/www/html
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html]
+└─$ ls
+dvwa  index.html  index.nginx-debian.html
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html]
+└─$ sudo rm -rf dvwa        
+[sudo] password for kali: 
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html]
+└─$ ls
+index.html  index.nginx-debian.html
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html]
+└─$ sudo git clone https://github.com/digininja/DVWA.git
+Cloning into 'DVWA'...
+remote: Enumerating objects: 5373, done.
+remote: Total 5373 (delta 0), reused 0 (delta 0), pack-reused 5373 (from 1)
+Receiving objects: 100% (5373/5373), 2.57 MiB | 12.41 MiB/s, done.
+Resolving deltas: 100% (2673/2673), done.
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html]
+└─$ sudo mv DVWA dvwa                                   
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html]
+└─$ ls
+dvwa  index.html  index.nginx-debian.html
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html]
+└─$ chmod -R 777 dvwa
+chmod: changing permissions of 'dvwa': Operation not permitted
+chmod: changing permissions of 'dvwa/security.php': Operation not permitted
+chmod: changing permissions of 'dvwa/README.vi.md': Operation not permitted
+chmod: changing permissions of 'dvwa/README.fr.md': Operation not permitted
+chmod: changing permissions of 'dvwa/.git': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/description': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/info': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/info/exclude': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/logs': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/logs/HEAD': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/logs/refs': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/logs/refs/heads': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/logs/refs/heads/master': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/logs/refs/remotes': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/logs/refs/remotes/origin': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/logs/refs/remotes/origin/HEAD': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/index': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/packed-refs': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/HEAD': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/refs': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/refs/tags': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/refs/heads': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/refs/heads/master': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/refs/remotes': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/refs/remotes/origin': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/refs/remotes/origin/HEAD': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/objects': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/objects/info': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/objects/pack': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/objects/pack/pack-a339df11521fdc28d0657611ea99462a9bef7480.idx': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/objects/pack/pack-a339df11521fdc28d0657611ea99462a9bef7480.pack': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/objects/pack/pack-a339df11521fdc28d0657611ea99462a9bef7480.rev': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/config': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks/fsmonitor-watchman.sample': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks/pre-receive.sample': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks/pre-merge-commit.sample': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks/prepare-commit-msg.sample': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks/pre-commit.sample': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks/pre-applypatch.sample': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks/applypatch-msg.sample': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks/pre-rebase.sample': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks/pre-push.sample': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks/update.sample': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks/push-to-checkout.sample': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks/commit-msg.sample': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks/post-update.sample': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/hooks/sendemail-validate.sample': Operation not permitted
+chmod: changing permissions of 'dvwa/.git/branches': Operation not permitted
+chmod: changing permissions of 'dvwa/external': Operation not permitted
+chmod: changing permissions of 'dvwa/external/recaptcha': Operation not permitted
+chmod: changing permissions of 'dvwa/external/recaptcha/recaptchalib.php': Operation not permitted
+chmod: changing permissions of 'dvwa/.dockerignore': Operation not permitted
+chmod: changing permissions of 'dvwa/SECURITY.md': Operation not permitted
+chmod: changing permissions of 'dvwa/.gitattributes': Operation not permitted
+chmod: changing permissions of 'dvwa/README.md': Operation not permitted
+chmod: changing permissions of 'dvwa/README.es.md': Operation not permitted
+chmod: changing permissions of 'dvwa/README.fa.md': Operation not permitted
+chmod: changing permissions of 'dvwa/Dockerfile': Operation not permitted
+chmod: changing permissions of 'dvwa/README.ar.md': Operation not permitted
+chmod: changing permissions of 'dvwa/tests': Operation not permitted
+chmod: changing permissions of 'dvwa/tests/README.md': Operation not permitted
+chmod: changing permissions of 'dvwa/tests/test_url.py': Operation not permitted
+chmod: changing permissions of 'dvwa/.gitignore': Operation not permitted
+chmod: changing permissions of 'dvwa/README.zh.md': Operation not permitted
+chmod: changing permissions of 'dvwa/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/favicon.ico': Operation not permitted
+chmod: changing permissions of 'dvwa/README.pl.md': Operation not permitted
+chmod: changing permissions of 'dvwa/CHANGELOG.md': Operation not permitted
+chmod: changing permissions of 'dvwa/docs': Operation not permitted
+chmod: changing permissions of 'dvwa/docs/DVWA_v1.3.pdf': Operation not permitted
+chmod: changing permissions of 'dvwa/docs/graphics': Operation not permitted
+chmod: changing permissions of 'dvwa/docs/graphics/docker': Operation not permitted
+chmod: changing permissions of 'dvwa/docs/graphics/docker/detail.png': Operation not permitted
+chmod: changing permissions of 'dvwa/docs/graphics/docker/overview.png': Operation not permitted
+chmod: changing permissions of 'dvwa/docs/pdf.html': Operation not permitted
+chmod: changing permissions of 'dvwa/README.it.md': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/source/xor_theory.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/source/download_ecb_attack.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/source/check_token_impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/source/check_token_high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/source/token_library_impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/source/token_library_high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/source/ecb_attack.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/source/oracle_attack.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/source/download_oracle_attack.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/cryptography/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/help.css': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csp': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csp/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csp/source/jsonp_impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csp/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csp/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csp/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csp/source/high.js': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csp/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csp/source/jsonp.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csp/source/impossible.js': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csp/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csp/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csp/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/open_redirect': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/open_redirect/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/open_redirect/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/open_redirect/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/open_redirect/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/open_redirect/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/open_redirect/source/info.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/open_redirect/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/open_redirect/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/open_redirect/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli/session-input.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli/test.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli_blind': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli_blind/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli_blind/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli_blind/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli_blind/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli_blind/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli_blind/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli_blind/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli_blind/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/sqli_blind/cookie-input.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/upload': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/upload/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/upload/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/upload/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/upload/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/upload/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/upload/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/upload/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/upload/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/authbypass': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/authbypass/change_user_details.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/authbypass/authbypass.js': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/authbypass/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/authbypass/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/authbypass/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/authbypass/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/authbypass/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/authbypass/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/authbypass/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/authbypass/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/authbypass/get_user_data.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/help.js': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/view_source.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/javascript': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/javascript/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/javascript/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/javascript/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/javascript/source/high_unobfuscated.js': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/javascript/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/javascript/source/medium.js': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/javascript/source/high.js': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/javascript/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/javascript/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/javascript/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/javascript/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/weak_id': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/weak_id/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/weak_id/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/weak_id/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/weak_id/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/weak_id/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/weak_id/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/weak_id/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/weak_id/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_d': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_d/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_d/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_d/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_d/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_d/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_d/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_d/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_d/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/fi': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/fi/file3.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/fi/file2.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/fi/file1.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/fi/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/fi/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/fi/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/fi/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/fi/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/fi/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/fi/file4.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/fi/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/fi/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/fi/include.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/src': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/src/LoginController.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/src/UserController.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/src/User.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/src/Order.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/src/Helpers.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/src/Login.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/src/GenericController.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/src/OrderController.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/src/Token.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/src/HealthController.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/README.md': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/gen_openapi.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/.gitignore': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/public': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/public/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/bootstrap.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/composer.lock': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/composer.json': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/openapi.yml': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/api/.htaccess': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/captcha': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/captcha/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/captcha/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/captcha/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/captcha/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/captcha/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/captcha/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/captcha/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/captcha/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csrf': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csrf/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csrf/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csrf/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csrf/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csrf/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csrf/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csrf/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csrf/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/csrf/test_credentials.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/exec': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/exec/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/exec/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/exec/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/exec/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/exec/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/exec/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/exec/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/exec/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_r': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_r/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_r/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_r/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_r/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_r/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_r/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_r/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_r/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/brute': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/brute/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/brute/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/brute/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/brute/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/brute/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/brute/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/brute/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/brute/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/view_source_all.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_s': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_s/source': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_s/source/medium.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_s/source/impossible.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_s/source/high.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_s/source/low.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_s/index.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_s/help': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/xss_s/help/help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/vulnerabilities/view_help.php': Operation not permitted
+chmod: changing permissions of 'dvwa/.github': Operation not permitted
+chmod: changing permissions of 'dvwa/.github/workflows': Operation not permitted
+chmod: changing permissions of 'dvwa/.github/workflows/vulnerable.yml': Operation not permitted
+chmod: changing permissions of 'dvwa/.github/workflows/pytest.yml': Operation not permitted
+chmod: changing permissions of 'dvwa/.github/workflows/docker-image.yml': Operation not permitted
+chmod: changing permissions of 'dvwa/.github/workflows/shiftleft-analysis.yml': Operation not permitted
+chmod: changing permissions of 'dvwa/.github/workflows/codeql-analysis.yml': Operation not permitted
+chmod: changing permissions of 'dvwa/.github/FUNDING.yml': Operation not permitted
+chmod: changing permissions of 'dvwa/.github/ISSUE_TEMPLATE': Operation not permitted
+chmod: changing permissions of 'dvwa/.github/ISSUE_TEMPLATE/bug-report---installation.md': Operation not permitted
+chmod: changing permissions of 'dvwa/.github/ISSUE_TEMPLATE/bug-report---vulnerability.md': Operation not permitted
+chmod: changing permissions of 'dvwa/.github/ISSUE_TEMPLATE/i-m-stuck.md': Operation not permitted
+chmod: changing permissions of 'dvwa/robots.txt': Operation not permitted
+chmod: changing permissions of 'dvwa/about.php': Operation not permitted
+chmod: changing permissions of 'dvwa/phpinfo.php': Operation not permitted
+chmod: changing permissions of 'dvwa/logout.php': Operation not permitted
+chmod: changing permissions of 'dvwa/README.pt.md': Operation not permitted
+chmod: changing permissions of 'dvwa/README.id.md': Operation not permitted
+chmod: changing permissions of 'dvwa/README.tr.md': Operation not permitted
+chmod: changing permissions of 'dvwa/setup.php': Operation not permitted
+chmod: changing permissions of 'dvwa/config': Operation not permitted
+chmod: changing permissions of 'dvwa/config/config.inc.php.dist': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/css': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/css/main.css': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/css/help.css': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/css/source.css': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/css/login.css': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/js': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/js/add_event_listeners.js': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/js/dvwaPage.js': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/images': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/images/dollar.png': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/images/theme-light-dark.png': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/images/login_logo.png': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/images/spanner.png': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/images/warning.png': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/images/logo.png': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/images/lock.png': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/includes': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/includes/dvwaPage.inc.php': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/includes/Parsedown.php': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/includes/DBMS': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/includes/DBMS/PGSQL.php': Operation not permitted
+chmod: changing permissions of 'dvwa/dvwa/includes/DBMS/MySQL.php': Operation not permitted
+chmod: changing permissions of 'dvwa/php.ini': Operation not permitted
+chmod: changing permissions of 'dvwa/database': Operation not permitted
+chmod: changing permissions of 'dvwa/database/create_oracle_db.sql': Operation not permitted
+chmod: changing permissions of 'dvwa/database/create_postgresql_db.sql': Operation not permitted
+chmod: changing permissions of 'dvwa/database/sqli.db.dist': Operation not permitted
+chmod: changing permissions of 'dvwa/database/create_mssql_db.sql': Operation not permitted
+chmod: changing permissions of 'dvwa/database/sqli.db': Operation not permitted
+chmod: changing permissions of 'dvwa/database/create_sqlite_db.sql': Operation not permitted
+chmod: changing permissions of 'dvwa/instructions.php': Operation not permitted
+chmod: changing permissions of 'dvwa/security.txt': Operation not permitted
+chmod: changing permissions of 'dvwa/login.php': Operation not permitted
+chmod: changing permissions of 'dvwa/hackable': Operation not permitted
+chmod: changing permissions of 'dvwa/hackable/uploads': Operation not permitted
+chmod: changing permissions of 'dvwa/hackable/uploads/dvwa_email.png': Operation not permitted
+chmod: changing permissions of 'dvwa/hackable/users': Operation not permitted
+chmod: changing permissions of 'dvwa/hackable/users/admin.jpg': Operation not permitted
+chmod: changing permissions of 'dvwa/hackable/users/1337.jpg': Operation not permitted
+chmod: changing permissions of 'dvwa/hackable/users/pablo.jpg': Operation not permitted
+chmod: changing permissions of 'dvwa/hackable/users/smithy.jpg': Operation not permitted
+chmod: changing permissions of 'dvwa/hackable/users/gordonb.jpg': Operation not permitted
+chmod: changing permissions of 'dvwa/hackable/flags': Operation not permitted
+chmod: changing permissions of 'dvwa/hackable/flags/fi.php': Operation not permitted
+chmod: changing permissions of 'dvwa/COPYING.txt': Operation not permitted
+chmod: changing permissions of 'dvwa/README.ko.md': Operation not permitted
+chmod: changing permissions of 'dvwa/compose.yml': Operation not permitted
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html]
+└─$ cd dvwa/config   
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html/dvwa/config]
+└─$ \
+> 
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html/dvwa/config]
+└─$ ls                 
+config.inc.php.dist
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html/dvwa/config]
+└─$ sudo cp config.inc.php.dist config.inc.php
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html/dvwa/config]
+└─$ sudo nano config.inc.php                  
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html/dvwa/config]
+└─$ sudo nano config.inc.php
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html/dvwa/config]
+└─$ sudo systemctl restart mysql
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html/dvwa/config]
+└─$ sudo service mysql start    
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html/dvwa/config]
+└─$ sudo mysql -u root -p   
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 31
+Server version: 11.8.1-MariaDB-4 Debian n/a
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Support MariaDB developers by giving a star at https://github.com/MariaDB/server
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| dvwa               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.003 sec)
+
+MariaDB [(none)]> create user 'admin'@127.0.0.1 identified by 'password';
+ERROR 1396 (HY000): Operation CREATE USER failed for 'admin'@'127.0.0.1'
+MariaDB [(none)]> select user, Host FROM mysql.user WHERE User='admin' AND Host='127.0.0.1';
++-------+-----------+
+| User  | Host      |
++-------+-----------+
+| admin | 127.0.0.1 |
++-------+-----------+
+1 row in set (0.001 sec)
+
+MariaDB [(none)]> DROP USER 'admin'@127.0.0.1;
+Query OK, 0 rows affected (0.002 sec)
+
+MariaDB [(none)]> SELECT User, Host FROM mysql.user WHERE User='admin';
+Empty set (0.001 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| dvwa               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.000 sec)
+
+MariaDB [(none)]> create user 'admin'@127.0.0.1 identified by 'password';
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [(none)]> grant all privileges on dvwa.* to 'admin'@127.0.0.1 identified by 'password';
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| dvwa               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.000 sec)
+
+MariaDB [(none)]> exit;
+Bye
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html/dvwa/config]
+└─$ cd ..         
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html/dvwa]
+└─$ cd ..
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www/html]
+└─$ cd ..
+                                                                                                                              
+┌──(kali㉿kali)-[/var/www]
+└─$ cd ..
+                                                                                                                              
+┌──(kali㉿kali)-[/var]
+└─$ cd ..
+                                                                                                                              
+┌──(kali㉿kali)-[/]
+└─$ cd /etc/php
+                                                                                                                              
+┌──(kali㉿kali)-[/etc/php]
+└─$ ls
+8.4
+                                                                                                                              
+┌──(kali㉿kali)-[/etc/php]
+└─$ cd 8.4/apache2
+                                                                                                                              
+┌──(kali㉿kali)-[/etc/php/8.4/apache2]
+└─$ ls
+conf.d  php.ini
+                                                                                                                              
+┌──(kali㉿kali)-[/etc/php/8.4/apache2]
+└─$ sudo nano php.ini       
+[sudo] password for kali: 
+                                                                                                                              
+┌──(kali㉿kali)-[/etc/php/8.4/apache2]
+└─$ sudo service apache2 start 
+                                                                                                                              
+┌──(kali㉿kali)-[/etc/php/8.4/apache2]
+└─$ http://127.0.0.1/dvwa/

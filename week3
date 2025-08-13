@@ -416,7 +416,9 @@ config.inc.php.dist
 ┌──(kali㉿kali)-[/var/www/html/dvwa/config]
 └─$ sudo nano config.inc.php
 
-// after typing the sudo nano config.inc.php, inside the nano editor edit the username to 'admin' and password to 'password' //
+IMPORTANT
+IMPORTANT
+// after typing the sudo nano config.inc.php, inside the nano editor edit the username to 'admin' and password to 'password', after making the changes press ctrl+o then press ENTER and then ctrl+X //
                                                                                                                               
 ┌──(kali㉿kali)-[/var/www/html/dvwa/config]
 └─$ sudo systemctl restart mysql
@@ -529,6 +531,10 @@ conf.d  php.ini
 ┌──(kali㉿kali)-[/etc/php/8.4/apache2]
 └─$ sudo nano php.ini       
 [sudo] password for kali: 
+
+IMPORTANT
+IMPORTANT
+// after typing the sudo nano php.inc command, in the nano editor press ctrl+F and type fopen and make sure that the url and open options are set to 'On', then press ctrl+o then press ENTER and then ctlr+X //
                                                                                                                               
 ┌──(kali㉿kali)-[/etc/php/8.4/apache2]
 └─$ sudo service apache2 start 
